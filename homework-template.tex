@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathpartir}
+
+% macros w/ no arguments
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\U}{\, \cup \,}
+\renewcommand{\^}{\, \cap \,}
+\newcommand{\impl}{\rightarrow}
+% macros w/ 1 or more arguments
+\newcommand{\conj}[2]{#1 \wedge #2}
+\newcommand{\disj}[2]{#1 \vee #2}
+\newcommand{\evalsto}[3]{#1 \vdash #2 \Downarrow #3}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+\title{Assignment X\vspace{-2ex}}
+\author{Hugh Man\\ 
+CSCI-B-123\vspace{-2ex}} 
+ 
+\maketitle
+ 
+ % problem 1
+\begin{exercise}{1} Claim: $ ((\conj{P}{Q}) \impl R) \impl (P \impl (Q \impl R)) $.
+
+  \begin{proof}
+    Proof details are found here. My favorite set is $\N$. $\N$ always includes 0. La dee da da da.
+
+    Here is a simple/boring proof-tree:
+
+    $$\inferrule*[right=$\impl I$]{
+      \inferrule*[right=$\impl I$]
+                 {\inferrule*[right=$\impl I$]{
+                     \inferrule*[right=$\impl I$]{
+                       \inferrule*[right=$\wedge I$]{P \\ Q}
+                                  {\conj{P}{Q}} \\
+                                  (\conj{P}{Q}) \impl R}
+                                {R}}
+                   {Q \impl R}}
+                 {P \impl (Q \impl R)}}
+    {((\conj{P}{Q}) \impl R) \impl (P \impl (Q \impl R))}
+    $$
+  \end{proof}
+\end{exercise}
+
+
+ 
+\end{document}
