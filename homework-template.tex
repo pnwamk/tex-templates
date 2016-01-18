@@ -2,6 +2,7 @@
 \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{mathpartir}
+\usepackage{latexsym}
 
 % macros w/ no arguments
 \newcommand{\N}{\mathbb{N}}
@@ -10,10 +11,12 @@
 \newcommand{\U}{\, \cup \,}
 \renewcommand{\^}{\, \cap \,}
 \newcommand{\impl}{\rightarrow}
+\newcommand{\dblleadsto}{\leadsto \! \! \! \! \! \leadsto}
 % macros w/ 1 or more arguments
 \newcommand{\conj}[2]{#1 \wedge #2}
 \newcommand{\disj}[2]{#1 \vee #2}
 \newcommand{\evalsto}[3]{#1 \vdash #2 \Downarrow #3}
+
 
 \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
@@ -34,7 +37,9 @@ CSCI-B-123\vspace{-2ex}}
 \begin{exercise}{1} Claim: $ ((\conj{P}{Q}) \impl R) \impl (P \impl (Q \impl R)) $.
 
   \begin{proof}
-    Proof details are found here. My favorite set is $\N$. $\N$ always includes 0. La dee da da da.
+    Proof details are found here. My favorite set is $\N$, which
+    should always include 0. Perhaps if $ A \twoheadrightarrow_{r} B $ 
+    then $ A \dblleadsto_{r} B$.
 
     Here is a simple/boring proof-tree:
 
